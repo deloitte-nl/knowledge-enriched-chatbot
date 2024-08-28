@@ -1,0 +1,7 @@
+{
+    "OPENAI_API_KEY":"",
+    "AZURE_OPENAI_ENDPOINT": "",
+    "GRAPH_USERNAME": "",
+    "GRAPH_PASSWORD": "",
+    "GRAPH_ENDPOINT": ""
+}
