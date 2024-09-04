@@ -1,0 +1,596 @@
+@prefix : <http://example.org/ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:UrbanGreeningInitiative a :Project ;
+    :launched "2020"^^xsd:gYear ;
+    :goal "To create a healthier, more sustainable city through urban greening" ;
+    :includes :RooftopGardenRevolution, :TreePlantingCampaign, :GrandCentralParkDevelopment ;
+    :ledBy :AngelaRichardson ;
+    :hasCommunityProgram :GreenAmbassadorsProgram ;
+    :contributesTo :CityClimateActionPlan ;
+    :developing :FiveYearPlan .
+
+:RooftopGardenRevolution a :Project ;
+    :objective "To install green roofs across city buildings" ;
+    :achievement "200 buildings with rooftop gardens by 2022" .
+
+:TreePlantingCampaign a :Campaign ;
+    :objective "To plant 100,000 trees in the city" ;
+    :includes :AdoptATreeProgram .
+
+:GrandCentralParkDevelopment a :DevelopmentProject ;
+    :size "50"^^xsd:integer ; 
+    :features :WalkingTrails, :Playgrounds, :SportsFields, :EcologicalShowcase .
+
+:GreenAmbassadorsProgram a :CommunityProgram ;
+    :objective "To train volunteers in sustainability" .
+
+:CityClimateActionPlan a :Plan ;
+    :focus "Climate change mitigation and resilience" .
+
+:FiveYearPlan a :StrategicPlan ;
+    :upcomingProjects :VerticalGardens, :UrbanFarmingInitiative, :GreenSpaceCityOrdinance .
+
+:AngelaRichardson a :Person ;
+    :name "Angela Richardson" ;
+    :role "Director of Urban Development, Metropolitan City" .
+
+:VerticalGardens a :Project ;
+    :focus "To develop vertical gardens on high-rise buildings" .
+
+:UrbanFarmingInitiative a :Project ;
+    :focus "To promote urban farming practices" .
+
+:GreenSpaceCityOrdinance a :Legislation ;
+    :objective "To mandate green spaces in new real estate developments" .
+
+:EcologicalShowcase :includes :Wetlands, :WildflowerMeadows, :NativePlantSpecies.
+
+:AdoptATreeProgram a :Program ;
+    :objective "To allow citizens to sponsor and care for city trees" .
+
+:WasteManagementProgram a :Program ;
+    :initiated "2018-03"^^xsd:date ;
+    :directedBy :SusanKline ;
+    :goal "To minimize landfill use and maximize resource recovery" ;
+    :hasInitiative :CityWideRecyclingInitiative, :RecyclingFacilityExpansion, :PublicAwarenessCampaigns, 
+                    :WasteReductionStrategies, :PartnershipsAndCollaborativeEfforts ;
+    :facingChallenges :ContaminationIssue, :MarketConditionChanges ;
+    :futurePlans :GreenHorizonPlantExpansion, :SmartWasteManagementSystemImplementation .
+
+:SusanKline a :Person ;
+    :name "Dr. Susan Kline" ;
+    :role "Environmental Manager" .
+
+:FiveYearPlan rdfs:label "Five Year Plan".
+:AngelaRichardson rdfs:label "Angela Richardson".
+:VerticalGardens rdfs:label "Vertical Gardens".
+:UrbanFarmingInitiative rdfs:label "Urban Farming Initiative".
+:GreenSpaceCityOrdinance rdfs:label "Green Space City Ordinance".
+:WalkingTrails rdfs:label "Walking Trails".
+:Playgrounds rdfs:label "Playgrounds".
+:SportsFields rdfs:label "Sports Fields".
+:EcologicalShowcase rdfs:label "Ecological Showcase".
+:AdoptATreeProgram rdfs:label "Adopt A Tree Program".
+:Wetlands rdfs:label "Wetlands".
+:WildflowerMeadows rdfs:label "Wildflower Meadows".
+:NativePlantSpecies rdfs:label "Native Plant Species".
+:WasteManagementProgram rdfs:label "Waste Management Program".
+:SusanKline rdfs:label "Susan Kline".
+:ZeroWastePolicy rdfs:label "Zero Waste Policy".
+:CityWideRecyclingInitiative rdfs:label "City Wide Recycling Initiative".
+:PublicAwarenessCampaigns rdfs:label "Public Awareness Campaigns".
+:WasteReductionStrategies rdfs:label "Waste Reduction Strategies".
+:PartnershipsAndCollaborativeEfforts rdfs:label "Partnerships and Collaborative Efforts".
+:WasteToWealthInitiative rdfs:label "Waste to Wealth Initiative".
+:ContaminationIssue rdfs:label "Contamination Issue".
+:MarketConditionChanges rdfs:label "Market Condition Changes".
+:GreenHorizonPlantExpansion rdfs:label "Green Horizon Plant Expansion".
+:SmartWasteManagementSystemImplementation rdfs:label "Smart Waste Management System Implementation".
+
+:CityWideRecyclingInitiative a :Initiative ;
+    :tool :ColorCodedBins .
+
+:ColorCodedBins a :Tool ;
+    :purpose "To facilitate proper sorting of recyclable materials" .
+
+:PublicTransportationEnhancementPlan a :Plan ;
+    :goal "To improve and expand the city's transit system for a greener, more connected city" ;
+    :comprises :LightRailNetworkExpansion, :BusFleetModernization, :BikeSharingProgram, 
+                :CommunityInvolvement, :SmartTransportationSystem ;
+    :aimsAt :ReducingTrafficCongestion, :ImprovingAirQuality, :IncreasingTransitAccessibility ;
+    :hasFutureProspects :AutonomousShuttleServiceIntroduction, :GreenSpacesAroundTransitHubs.
+
+:LightRailNetworkExpansion a :Project ;
+    :name "Metropolitan Light Rail Network" .
+
+:BusFleetModernization a :Program ;
+    :focus "Adoption of electric buses" .
+
+:BikeSharingProgram a :Initiative ;
+    :supportedBy :CyclingInfrastructureDevelopment ;
+    :objective "To promote cycling as a sustainable mode of transportation" .
+
+:CommunityInvolvement a :Effort ;
+    :methods :PublicWorkshops, :TownHallMeetings, :Surveys ;
+    :focus "To ensure the plan reflects community needs and desires".
+
+:SmartTransportationSystem a :System ;
+    :features :RealTimeTracking, :RoutePlanningApps, :ElectronicFarePayment ;
+    :objective "To enhance the efficiency and user experience of public transport" .
+
+:ReducingTrafficCongestion a :Goal ;
+    :relatedTo :UrbanPlanning.
+
+:ImprovingAirQuality a :Goal ;
+    :relatedTo :EnvironmentalHealth.
+
+:IncreasingTransitAccessibility a :Goal ;
+    :relatedTo :SocialInclusivity.
+
+:AutonomousShuttleServiceIntroduction a :Prospect ;
+    :relatedTo :LastMileConnectivity.
+
+:GreenSpacesAroundTransitHubs a :Prospect ;
+    :relatedTo :UrbanSustainability.
+
+:ServiceRouteExpansion a :Expansion .
+:PublicWorkshops a :PublicEvent .
+:TownHallMeetings a :PublicEvent .
+:Surveys a :FeedbackMechanism .
+:RealTimeTracking a :Technology .
+:RoutePlanningApps a :Technology .
+:ElectronicFarePayment a :Service.
+
+:SustainableWaterManagement a :Initiative ;
+    :includes :WaterConservationAndEfficiencyProgram, :InfrastructureUpgrades, :WaterBodiesRestoration,
+               :StakeholderEngagement, :DroughtPreparedness, :FutureSustainableDevelopment.
+
+:InfrastructureUpgrades a :Activity ;
+    :focus "Modernization of water treatment plants and pipelines" ;
+    :integrationOf :SmartWaterTechnologies.
+
+:WaterBodiesRestoration a :Project ;
+    :includes :RiverRevivalProgram, :BufferZonesEstablishment.
+
+:StakeholderEngagement a :Process ;
+    :involves :CommunityGroups, :IndustryRepresentatives, :EnvironmentalOrganizations.
+
+:DroughtPreparedness a :Plan ;
+    :focus "Building climate resilience against droughts" ;
+    :includes :WaterStorageCapacityIncrease, :WaterSourceDiversification.
+
+:FutureSustainableDevelopment a :Direction ;
+    :exploring :WaterReclamationAndReuse, :GreenInfrastructureInvestments.
+
+:SmartWaterTechnologies a :Technology .
+:RiverRevivalProgram a :Program .
+:BufferZonesEstablishment a :Activity .
+:CommunityGroups a :StakeholderGroup .
+:IndustryRepresentatives a :StakeholderGroup .
+:EnvironmentalOrganizations a :StakeholderGroup .
+:WaterStorageCapacityIncrease a :Activity .
+:WaterSourceDiversification a :Activity .
+:WaterReclamationAndReuse a :Project .
+:GreenInfrastructureInvestments a :Investment.
+
+:MetropolitanRenewableEnergyInitiative a :Initiative ;
+    :includes :SolarPowerExpansionProject, :WindEnergyGenerationProject, 
+                :GeothermalProjects, :HydroelectricProjects, 
+                :CommunityEngagementAndEducation, :ElectricVehicleInfrastructure, 
+                :InnovationIncentivesAndPartnerships, :SustainableEnergyPolicies ;
+    :hasFuturePlans :OffshoreWindExploration, :UrbanFarmingWithSolarIntegration, 
+                     :GreenEnergyInnovationHubEstablishment.
+
+:SolarPowerExpansionProject a :Project ;
+    :strategy "Installation of solar panels on various structures" ;
+    :incentives :SolarPanelIncentives.
+
+:WindEnergyGenerationProject a :Project ;
+    :features :HighlandWindFarm, :UrbanWindTurbines ;
+    :goal "To integrate wind energy into the city's energy mix".
+
+:HighlandWindFarm a :EnergyFacility ;
+    :product "Wind energy".
+
+:UrbanWindTurbines a :Concept ;
+    :underEvaluation "Feasibility studies for wind turbines on buildings".
+
+:GeothermalProjects a :Project ;
+    :application "Heating and cooling for municipal buildings".
+
+:HydroelectricProjects a :Project ;
+    :source "City's rivers and water systems".
+
+:CommunityEngagementAndEducation a :Program ;
+    :includes :GreenAmbassadorsProgram, :RenewableEnergyWorkshops, :SchoolRenewableEnergyPrograms.
+
+:ElectricVehicleInfrastructure a :Infrastructure ;
+    :development "Charging stations for electric vehicles and transition of public transportation".
+
+:InnovationIncentivesAndPartnerships a :Scheme ;
+    :encourages "Research and development in renewable energy technologies".
+
+:SustainableEnergyPolicies a :PolicyFramework ;
+    :mandates "Renewable energy use in new developments" ;
+    :target "50% renewable energy by 2030".
+
+:OffshoreWindExploration a :Plan ;
+    :potential "Assessment of offshore wind energy".
+
+:UrbanFarmingWithSolarIntegration a :Plan ;
+    :integration "Combining urban agriculture with solar technology".
+
+:GreenEnergyInnovationHubEstablishment a :Plan ;
+    :aim "To create a center for clean energy businesses and startups".
+
+:SolarPanelIncentives a :Incentive .
+:RenewableEnergyWorkshops a :EducationalActivity .
+:SchoolRenewableEnergyPrograms a :EducationalProgram.
+
+:EcoFriendlyBuildingAndConstruction a :Initiative ;
+    :includes :GreenArchitectureAndDesign, :InnovativeConstructionMaterials, 
+               :EnergyEfficiencyMeasures, :WaterConservationMeasures, 
+               :EducationAndIncentives, :SustainableUrbanPlanning ;
+    :futureTech :NewConstructionTechnologies, :SmartBuildingManagementSystems ;
+    :internationalCollaboration :GlobalSustainableConstructionPartnerships.
+
+:GreenArchitectureAndDesign a :Practice ;
+    :focus "Energy-efficient designs utilizing natural resources and enhancing biodiversity".
+
+:InnovativeConstructionMaterials a :FocusArea ;
+    :encourages "Use of recycled materials, sustainably sourced wood, and low-emission concrete".
+
+:EnergyEfficiencyMeasures a :Requirement ;
+    :includes :EnergyAudits, :RetrofitPrograms, :RenewableEnergyIntegration.
+
+:WaterConservationMeasures a :Requirement ;
+    :includes :WaterSavingFixtures, :GrayWaterRecyclingSystems, :RainwaterHarvestingTechnologies.
+
+:EducationAndIncentives a :Program ;
+    :provides "Training and financial incentives for exceeding sustainability standards".
+
+:SustainableUrbanPlanning a :Strategy ;
+    :integrates "Eco-friendly construction with city growth and transportation planning".
+
+:NewConstructionTechnologies a :Technology ;
+    :exploring "3D printing and other innovative construction techniques".
+
+:SmartBuildingManagementSystems a :Technology ;
+    :purpose "To optimize building resource use and management".
+
+:GlobalSustainableConstructionPartnerships a :Collaboration ;
+    :aim "To share best practices in sustainable construction worldwide".
+
+:EnergyAudits a :Service .
+:RetrofitPrograms a :Service .
+:RenewableEnergyIntegration a :Feature .
+:WaterSavingFixtures a :Fixture .
+:GrayWaterRecyclingSystems a :System .
+:RainwaterHarvestingTechnologies a :Technology.
+
+:SustainableFoodSystems a :Initiative ;
+    :includes :UrbanAgricultureAdvancement, :FarmToTableNetworks, :FoodWasteReductionPrograms,
+               :NutritionEducationAndAccess, :SustainableFishingAndAquaculture,
+               :PolicyFrameworkAndIncentives ;
+    :futureVision :HolisticFoodLifecycleApproach.
+
+:UrbanAgricultureAdvancement a :Program ;
+    :supports :CommunityGardens, :RooftopFarms, :VerticalIndoorFarming.
+
+:FarmToTableNetworks a :Network ;
+    :connects :LocalFarmers, :UrbanConsumers, :FoodCooperatives, :LocalRestaurants.
+
+:FoodWasteReductionPrograms a :Program ;
+    :includes :CompostingEducation, :FoodRecoveryPartnerships.
+
+:NutritionEducationAndAccess a :Initiative ;
+    :campaign "Healthy Eating, Healthy Living".
+
+:SustainableFishingAndAquaculture a :Practice ;
+    :supports :ResponsibleFisheries, :AquaponicsSystems.
+
+:PolicyFrameworkAndIncentives a :Framework ;
+    :incentivizes :SustainableFoodBusinesses, :FoodSystemInnovationResearch.
+
+:HolisticFoodLifecycleApproach a :Vision ;
+    :explores :BlockchainForFoodTraceability, :FoodSupplyChainResilience, :CircularFoodEconomyPolicies.
+
+:CommunityGardens a :UrbanAgricultureType .
+:RooftopFarms a :UrbanAgricultureType .
+:VerticalIndoorFarming a :UrbanAgricultureType .
+:LocalFarmers a :StakeholderGroup .
+:UrbanConsumers a :StakeholderGroup .
+:FoodCooperatives a :StakeholderGroup .
+:LocalRestaurants a :StakeholderGroup .
+:CompostingEducation a :EducationalProgram .
+:FoodRecoveryPartnerships a :Partnership .
+:ResponsibleFisheries a :Fishery .
+:AquaponicsSystems a :AquacultureType .
+:SustainableFoodBusinesses a :BusinessCategory .
+:FoodSystemInnovationResearch a :ResearchArea .
+:BlockchainForFoodTraceability a :Technology .
+:FoodSupplyChainResilience a :SupplyChainAspect .
+:CircularFoodEconomyPolicies a :PolicyArea.
+
+:ConservationAndBiodiversityInitiative a :Initiative ;
+    :includes :UrbanNatureReservesCreation, :WildlifeCorridorsEstablishment, 
+               :NativePlantingProgram, :InvasiveSpeciesControl, 
+               :PublicEngagementAndEducation, :SustainableDevelopmentStandards, 
+               :PartnershipsForConservation, :BiodiversityMonitoring, 
+               :PolicyAdvocacy ;
+    :futureProspects :GlobalModelForUrbanBiodiversity.
+
+:UrbanNatureReservesCreation a :Program ;
+    :goal "To establish natural sanctuaries within the urban environment".
+
+:WildlifeCorridorsEstablishment a :Program ;
+    :objective "To facilitate safe movement of species across urban areas".
+
+:NativePlantingProgram a :Program ;
+    :focus "Encourage the use of native plant species in urban landscaping".
+
+:InvasiveSpeciesControl a :Program ;
+    :aim "To control and eradicate invasive species threatening local ecosystems".
+
+:PublicEngagementAndEducation a :Program ;
+    :includes :BiodiversityWorkshops, :GuidedNatureWalks, :CitizenScienceProjects.
+
+:SustainableDevelopmentStandards a :Standard ;
+    :implements "Biodiversity considerations in urban planning and construction".
+
+:PartnershipsForConservation a :Collaboration ;
+    :involves :EnvironmentalNGOs, :AcademicInstitutions, :GreenBusinesses.
+
+:BiodiversityMonitoring a :Program ;
+    :purpose "To track and analyze the status of urban biodiversity".
+
+:PolicyAdvocacy a :Activity ;
+    :focus "To promote biodiversity protection through legislation and policy".
+
+:GlobalModelForUrbanBiodiversity a :Goal ;
+    :aspiration "To establish Metropolitan City as a leading example in urban biodiversity".
+
+:BiodiversityWorkshops a :EducationalActivity .
+:GuidedNatureWalks a :EducationalActivity .
+:CitizenScienceProjects a :CommunityInvolvementActivity .
+:EnvironmentalNGOs a :OrganizationType .
+:AcademicInstitutions a :OrganizationType .
+:GreenBusinesses a :BusinessType.
+
+:AirQualityImprovementInitiative a :Initiative ;
+    :includes :EmissionReductionStrategies, :TransportationAndMobilityTransformation,
+               :UrbanGreeningAndInfrastructure, :MonitoringAndPublicAwareness,
+               :StakeholderCollaborations, :CleanAirPolicies ;
+    :futureDirections :AdvancedTechnologicalSolutionsForAirQuality,
+                       :ResearchIntoAlternativeFuels.
+
+:EmissionReductionStrategies a :Strategy ;
+    :focus "To reduce emissions from industrial and other sources".
+
+:TransportationAndMobilityTransformation a :Program ;
+    :actions :ExpansionOfPublicTransit, :CreationOfBikeFriendlyInfrastructure, 
+              :PromotionOfElectricVehicles, :ImplementationOfCarFreeZones.
+
+:UrbanGreeningAndInfrastructure a :Program ;
+    :includes :TreePlantingCampaigns, :DevelopmentOfGreenBelts, 
+               :VerticalGardens, :EcoFriendlyBuildingProjects.
+
+:MonitoringAndPublicAwareness a :Activity ;
+    :implements :AirQualityMonitoringNetwork ;
+    :publicTools :AirQualityInformationApp.
+
+:StakeholderCollaborations a :Collaboration ;
+    :partners :EnvironmentalExperts, :HealthProfessionals, :InternationalCleanAirCoalitions.
+
+:CleanAirPolicies a :LegalFramework ;
+    :includes :MetropolitanCityCleanAirAct.
+
+:AdvancedTechnologicalSolutionsForAirQuality a :Goal ;
+    :exploring "Smart urban planning and traffic optimization tools".
+
+:ResearchIntoAlternativeFuels a :ResearchPriority ;
+    :aim "To investigate sustainable energy sources for further emission reductions".
+
+:ExpansionOfPublicTransit a :Expansion .
+:CreationOfBikeFriendlyInfrastructure a :InfrastructureProject .
+:PromotionOfElectricVehicles a :Promotion .
+:ImplementationOfCarFreeZones a :PolicyImplementation .
+:TreePlantingCampaigns a :Campaign .
+:UrbanGreeningInitiative rdfs:label "Urban Greening Initiative" .
+:RooftopGardenRevolution rdfs:label "Rooftop Garden Revolution" .
+:TreePlantingCampaign rdfs:label "Tree Planting Campaign" .
+:GrandCentralParkDevelopment rdfs:label "Grand Central Park Development" .
+:GreenAmbassadorsProgram rdfs:label "Green Ambassadors Program" .
+:CityClimateActionPlan rdfs:label "City Climate Action Plan" .
+:RecyclingFacilityExpansion rdfs:label "Recycling Facility Expansion" .
+:ColorCodedBins rdfs:label "Color Coded Bins" .
+:PublicTransportationEnhancementPlan rdfs:label "Public Transportation Enhancement Plan" .
+:LightRailNetworkExpansion rdfs:label "Light Rail Network Expansion" .
+:BusFleetModernization rdfs:label "Bus Fleet Modernization" .
+:BikeSharingProgram rdfs:label "Bike Sharing Program" .
+:CommunityInvolvement rdfs:label "Community Involvement" .
+:SmartTransportationSystem rdfs:label "Smart Transportation System" .
+:ReducingTrafficCongestion rdfs:label "Reducing Traffic Congestion" .
+:ImprovingAirQuality rdfs:label "Improving Air Quality" .
+:IncreasingTransitAccessibility rdfs:label "Increasing Transit Accessibility" .
+:AutonomousShuttleServiceIntroduction rdfs:label "Autonomous Shuttle Service Introduction" .
+:GreenSpacesAroundTransitHubs rdfs:label "Green Spaces Around Transit Hubs" .
+:ServiceRouteExpansion rdfs:label "Service Route Expansion" .
+:PublicWorkshops rdfs:label "Public Workshops" .
+:TownHallMeetings rdfs:label "Town Hall Meetings" .
+:Surveys rdfs:label "Surveys" .
+:RealTimeTracking rdfs:label "Real Time Tracking" .
+:RoutePlanningApps rdfs:label "Route Planning Apps" .
+:ElectronicFarePayment rdfs:label "Electronic Fare Payment" .
+:SustainableWaterManagement rdfs:label "Sustainable Water Management" .
+:InfrastructureUpgrades rdfs:label "Infrastructure Upgrades" .
+:WaterBodiesRestoration rdfs:label "Water Bodies Restoration" .
+:StakeholderEngagement rdfs:label "Stakeholder Engagement" .
+:DroughtPreparedness rdfs:label "Drought Preparedness" .
+:FutureSustainableDevelopment rdfs:label "Future Sustainable Development" .
+:SmartWaterTechnologies rdfs:label "Smart Water Technologies" .
+:RiverRevivalProgram rdfs:label "River Revival Program" .
+:BufferZonesEstablishment rdfs:label "Buffer Zones Establishment" .
+:CommunityGroups rdfs:label "Community Groups" .
+:IndustryRepresentatives rdfs:label "Industry Representatives" .
+:EnvironmentalOrganizations rdfs:label "Environmental Organizations" .
+:WaterStorageCapacityIncrease rdfs:label "Water Storage Capacity Increase" .
+:WaterSourceDiversification rdfs:label "Water Source Diversification" .
+:WaterReclamationAndReuse rdfs:label "Water Reclamation And Reuse" .
+:GreenInfrastructureInvestments rdfs:label "Green Infrastructure Investments" .
+:MetropolitanRenewableEnergyInitiative rdfs:label "Metropolitan Renewable Energy Initiative" .
+:SolarPowerExpansionProject rdfs:label "Solar Power Expansion Project" .
+:WindEnergyGenerationProject rdfs:label "Wind Energy Generation Project" .
+:HighlandWindFarm rdfs:label "Highland Wind Farm" .
+:UrbanWindTurbines rdfs:label "Urban Wind Turbines" .
+:GeothermalProjects rdfs:label "Geothermal Projects" .
+:HydroelectricProjects rdfs:label "Hydroelectric Projects" .
+:CommunityEngagementAndEducation rdfs:label "Community Engagement And Education" .
+:ElectricVehicleInfrastructure rdfs:label "Electric Vehicle Infrastructure" .
+:InnovationIncentivesAndPartnerships rdfs:label "Innovation Incentives And Partnerships" .
+:SustainableEnergyPolicies rdfs:label "Sustainable Energy Policies" .
+:OffshoreWindExploration rdfs:label "Offshore Wind Exploration" .
+:UrbanFarmingWithSolarIntegration rdfs:label "Urban Farming With Solar Integration" .
+:GreenEnergyInnovationHubEstablishment rdfs:label "Green Energy Innovation Hub Establishment" .
+:SolarPanelIncentives rdfs:label "Solar Panel Incentives" .
+:RenewableEnergyWorkshops rdfs:label "Renewable Energy Workshops" .
+:SchoolRenewableEnergyPrograms rdfs:label "School Renewable Energy Programs" .
+:EcoFriendlyBuildingAndConstruction rdfs:label "Eco-Friendly Building And Construction" .
+:GreenArchitectureAndDesign rdfs:label "Green Architecture And Design" .
+:InnovativeConstructionMaterials rdfs:label "Innovative Construction Materials" .
+:EnergyEfficiencyMeasures rdfs:label "Energy Efficiency Measures" .
+:WaterConservationMeasures rdfs:label "Water Conservation Measures" .
+:EducationAndIncentives rdfs:label "Education And Incentives" .
+:SustainableUrbanPlanning rdfs:label "Sustainable Urban Planning" .
+:NewConstructionTechnologies rdfs:label "New Construction Technologies" .
+:SmartBuildingManagementSystems rdfs:label "Smart Building Management Systems" .
+:GlobalSustainableConstructionPartnerships rdfs:label "Global Sustainable Construction Partnerships" .
+:EnergyAudits rdfs:label "Energy Audits" .
+:RetrofitPrograms rdfs:label "Retrofit Programs" .
+:RenewableEnergyIntegration rdfs:label "Renewable Energy Integration" .
+:WaterSavingFixtures rdfs:label "Water Saving Fixtures" .
+:GrayWaterRecyclingSystems rdfs:label "Gray Water Recycling Systems" .
+:RainwaterHarvestingTechnologies rdfs:label "Rainwater Harvesting Technologies" .
+:SustainableFoodSystems rdfs:label "Sustainable Food Systems" .
+:UrbanAgricultureAdvancement rdfs:label "Urban Agriculture Advancement" .
+:FarmToTableNetworks rdfs:label "Farm To Table Networks" .
+:FoodWasteReductionPrograms rdfs:label "Food Waste Reduction Programs" .
+:NutritionEducationAndAccess rdfs:label "Nutrition Education And Access" .
+:SustainableFishingAndAquaculture rdfs:label "Sustainable Fishing And Aquaculture" .
+:PolicyFrameworkAndIncentives rdfs:label "Policy Framework And Incentives" .
+:HolisticFoodLifecycleApproach rdfs:label "Holistic Food Lifecycle Approach" .
+:CommunityGardens rdfs:label "Community Gardens" .
+:RooftopFarms rdfs:label "Rooftop Farms" .
+:VerticalIndoorFarming rdfs:label "Vertical Indoor Farming" .
+:LocalFarmers rdfs:label "Local Farmers" .
+:UrbanConsumers rdfs:label "Urban Consumers" .
+:FoodCooperatives rdfs:label "Food Cooperatives" .
+:LocalRestaurants rdfs:label "Local Restaurants" .
+:CompostingEducation rdfs:label "Composting Education" .
+:FoodRecoveryPartnerships rdfs:label "Food Recovery Partnerships" .
+:ResponsibleFisheries rdfs:label "Responsible Fisheries" .
+:AquaponicsSystems rdfs:label "Aquaponics Systems" .
+:SustainableFoodBusinesses rdfs:label "Sustainable Food Businesses" .
+:FoodSystemInnovationResearch rdfs:label "Food System Innovation Research" .
+:BlockchainForFoodTraceability rdfs:label "Blockchain For Food Traceability" .
+:FoodSupplyChainResilience rdfs:label "Food Supply Chain Resilience" .
+:CircularFoodEconomyPolicies rdfs:label "Circular Food Economy Policies" .
+:ConservationAndBiodiversityInitiative rdfs:label "Conservation And Biodiversity Initiative" .
+:UrbanNatureReservesCreation rdfs:label "Urban Nature Reserves Creation" .
+:WildlifeCorridorsEstablishment rdfs:label "Wildlife Corridors Establishment" .
+:NativePlantingProgram rdfs:label "Native Planting Program" .
+:InvasiveSpeciesControl rdfs:label "Invasive Species Control" .
+:PublicEngagementAndEducation rdfs:label "Public Engagement And Education" .
+:SustainableDevelopmentStandards rdfs:label "Sustainable Development Standards" .
+:PartnershipsForConservation rdfs:label "Partnerships For Conservation" .
+:BiodiversityMonitoring rdfs:label "Biodiversity Monitoring" .
+:PolicyAdvocacy rdfs:label "Policy Advocacy" .
+:GlobalModelForUrbanBiodiversity rdfs:label "Global Model For Urban Biodiversity" .
+:BiodiversityWorkshops rdfs:label "Biodiversity Workshops" .
+:GuidedNatureWalks rdfs:label "Guided Nature Walks" .
+:CitizenScienceProjects rdfs:label "Citizen Science Projects" .
+:EnvironmentalNGOs rdfs:label "Environmental NGOs" .
+:AcademicInstitutions rdfs:label "Academic Institutions" .
+:GreenBusinesses rdfs:label "Green Businesses" .
+:AirQualityImprovementInitiative rdfs:label "Air Quality Improvement Initiative" .
+:EmissionReductionStrategies rdfs:label "Emission Reduction Strategies" .
+:TransportationAndMobilityTransformation rdfs:label "Transportation And Mobility Transformation" .
+:UrbanGreeningAndInfrastructure rdfs:label "Urban Greening And Infrastructure" .
+:MonitoringAndPublicAwareness rdfs:label "Monitoring And Public Awareness" .
+:StakeholderCollaborations rdfs:label "Stakeholder Collaborations" .
+:CleanAirPolicies rdfs:label "Clean Air Policies" .
+:AdvancedTechnologicalSolutionsForAirQuality rdfs:label "Advanced Technological Solutions For Air Quality" .
+:ResearchIntoAlternativeFuels rdfs:label "Research Into Alternative Fuels" .
+:ExpansionOfPublicTransit rdfs:label "Expansion Of Public Transit" .
+:CreationOfBikeFriendlyInfrastructure rdfs:label "Creation Of Bike Friendly Infrastructure" .
+:PromotionOfElectricVehicles rdfs:label "Promotion Of Electric Vehicles" .
+:ImplementationOfCarFreeZones rdfs:label "Implementation Of Car Free Zones" .
+:TreePlantingCampaigns rdfs:label "Tree Planting Campaigns" .
+:DevelopmentOfGreenBelts rdfs:label "Development Of Green Belts" .
+:VerticalGardens rdfs:label "Vertical Gardens" .
+:EcoFriendlyBuildingProjects rdfs:label "Eco-Friendly Building Projects" .
+:AirQualityMonitoringNetwork rdfs:label "Air Quality Monitoring Network" .
+:AirQualityInformationApp rdfs:label "Air Quality Information App" .
+:EnvironmentalExperts rdfs:label "Environmental Experts" .
+:HealthProfessionals rdfs:label "Health Professionals" .
+:InternationalCleanAirCoalitions rdfs:label "International Clean Air Coalitions" .
+:MetropolitanCityCleanAirAct rdfs:label "Metropolitan City Clean Air Act" .
+:SmartUrbanPlanning rdfs:label "Smart Urban Planning" .
+:TrafficOptimizationTools rdfs:label "Traffic Optimization Tools" .
+:AlternativeFuels rdfs:label "Alternative Fuels" .
+
+:Project rdfs:label "Project" .
+:Campaign rdfs:label "Campaign" .
+:DevelopmentProject rdfs:label "Development Project" .
+:CommunityProgram rdfs:label "Community Program" .
+:Plan rdfs:label "Plan" .
+:StrategicPlan rdfs:label "Strategic Plan" .
+:Person rdfs:label "Person" .
+:Legislation rdfs:label "Legislation" .
+:Program rdfs:label "Program" .
+:Initiative rdfs:label "Initiative" .
+:Tool rdfs:label "Tool" .
+:System rdfs:label "System" .
+:Goal rdfs:label "Goal" .
+:Prospect rdfs:label "Prospect" .
+:Expansion rdfs:label "Expansion" .
+:PublicEvent rdfs:label "Public Event" .
+:FeedbackMechanism rdfs:label "Feedback Mechanism" .
+:Technology rdfs:label "Technology" .
+:Service rdfs:label "Service" .
+:Activity rdfs:label "Activity" .
+:StakeholderGroup rdfs:label "Stakeholder Group" .
+:Investment rdfs:label "Investment" .
+:EnergyFacility rdfs:label "Energy Facility" .
+:Concept rdfs:label "Concept" .
+:Infrastructure rdfs:label "Infrastructure" .
+:Scheme rdfs:label "Scheme" .
+:PolicyFramework rdfs:label "Policy Framework" .
+:Incentive rdfs:label "Incentive" .
+:EducationalActivity rdfs:label "Educational Activity" .
+:EducationalProgram rdfs:label "Educational Program" .
+:Practice rdfs:label "Practice" .
+:FocusArea rdfs:label "Focus Area" .
+:Requirement rdfs:label "Requirement" .
+:Fixture rdfs:label "Fixture" .
+:System rdfs:label "System" .
+:Strategy rdfs:label "Strategy" .
+:Collaboration rdfs:label "Collaboration" .
+:LegalFramework rdfs:label "Legal Framework" .
+:ResearchPriority rdfs:label "Research Priority" .
+:InfrastructureProject rdfs:label "Infrastructure Project" .
+:Promotion rdfs:label "Promotion" .
+:PolicyImplementation rdfs:label "Policy Implementation" .
+:Campaign rdfs:label "Campaign" .
+:Network rdfs:label "Network" .
+:Partnership rdfs:label "Partnership" .
+:Fishery rdfs:label "Fishery" .
+:AquacultureType rdfs:label "Aquaculture Type" .
+:BusinessCategory rdfs:label "Business Category" .
+:ResearchArea rdfs:label "Research Area" .
+:SupplyChainAspect rdfs:label "Supply Chain Aspect" .
+:PolicyArea rdfs:label "Policy Area" .
+:OrganizationType rdfs:label "Organization Type" .
+:BusinessType rdfs:label "Business Type" .
